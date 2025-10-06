@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Giovany Piveta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="description" content="Landing page com login">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Login, Landing, Forms">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Home Page</title>
+</head>
+<body>
+    <main>
+        <header class="header">
+            <nav class="nav">
+                <a href="#" class="nav_logo">LOGO</a>
+
+                <ul class="nav_items">
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">Início</a>
+                        <a href="#" class="nav_link">Produtos</a>
+                        <a href="#" class="nav_link">Serviços</a>
+                        <a href="#" class="nav_link">Contato</a>
+                    </li>
+                </ul>
+
+                <button class="button" id="form-open">Login</button>
+            </nav>
+        </header>
+        <section class="home">
+            <div class="form_container">
+                <img src="./assets/exit.png" alt="Icone para sair" class="exit" id="exit">
+                <div class="form login_form">
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input_box">
+                            <input type="email" placeholder="Insira seu email" required>
+                            <img src="./assets/emailicon.png" alt="Icone email" class="email"> 
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Insira sua senha" required>
+                            <img src="./assets/cadeadoicon.png" alt="Icone cadeado" class="cadeado">
+                        </div>
+
+                        <div class="option_field">
+                            <span class="checkbox">
+                                <input type="checkbox" id="check">
+                                <label for="check">Lembrar email e senha</label>
+                            </span>
+                            <a href="#" class="forgot_pw">Esqueci a senha</a>
+                        </div>
+                        <button class="button" id="form-open">Entrar</button>
+                        <div class="login_signup">Não tem uma conta?<a href="#" id="signup"> Clique Aqui!</a></div>
+                    </form>
+                </div>
+                <div class="form signup_form">
+                    <form action="#">
+                        <h2>Criar Conta</h2>
+                        <div class="input_box">
+                            <input type="email" placeholder="Insira seu email" required>
+                            <img src="./assets/emailicon.png" alt="Icone email" class="email"> 
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Crie sua senha" required>
+
+                            <img src="./assets/cadeadoicon.png" alt="Icone cadeado" class="cadeado">
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Confirme sua senha" required>
+
+                            <img src="./assets/cadeadoicon.png" alt="Icone cadeado" class="cadeado">
+                        </div>
+                        <button class="button">Criar Cadastro</button>
+                        <div class="login_signup">Já sou cadastrado!<a href="#" id="login"> Clique Aqui!</a></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./javascript/script.js"></script>
+</body>
+</html>

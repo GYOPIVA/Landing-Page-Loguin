@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.header .nav {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav_link,
+.nav_logo,
+.button {
+    color: #fff;
+}
+
+.nav,
+.nav_item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_item {
+    column-gap: 25px;
+}
+
+.nav_logo {
+    font-size: 25px;
+}
+
+.nav_link:hover {
+    color: #4c76ff;
+}
+
+.button {
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+a {
+    text-decoration: none;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../assets/backgroundfull.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000bd;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+
+.home.show::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form_container {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    top: 50%;
+    left: 50%;
+    z-index: 15;
+    background-color: #f2f2f2;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.signup_form {
+    display: none;
+}
+
+.form_container.active .signup_form {
+    display: block;
+}
+.form_container.active .login_form {
+    display: none;
+}
+
+.home.show .form_container {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.form_container img {
+    height: 23px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.input_box input:focus {
+    border-color: #4c4fff;
+}
+
+.input_box .email,
+.cadeado {
+    left: 0;
+    opacity: 0.7;
+    top: 50%;
+}
+
+.input_box .eye {
+    opacity: 0.7;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+}
+
+.exit {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: #0b0217;
+    font-size: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.form_container h2 {
+    font-size: 22px;
+    color: #0b0217;
+    text-align: center;
+}
+
+.input_box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.input_box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #aaa;
+    outline: none;
+    padding: 0 30px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.option_field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.form_container a:hover {
+    text-decoration: underline
+}
+
+.checkbox input {
+    font-size: 15px;
+    accent-color: #0066ff;
+}
+
+.checkbox {
+    display: flex;
+    white-space: nowrap;
+    font-size: 15px;
+    column-gap: 8px;
+}
+
+.checkbox label {
+    font-size: 15px;
+    user-select: none;
+    color: #0b0217;
+    cursor: pointer;
+}
+
+.form_container .button {
+    background-color: #3385ff;
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.login_signup {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media screen and (max-width:800px) {
+    .nav{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}
